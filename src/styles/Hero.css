@@ -1,0 +1,60 @@
+ /* Hero section styling */
+ .hero {
+  background: linear-gradient(145deg, #18263b, #1d3a59); /* Gradient background with blending */
+  color: #ffffff; /* White text for contrast */
+  padding: 50px 50px;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 3.0rem; /* Large, impactful heading */
+  font-weight: 700; /* Bold text */
+  margin-bottom: 20px;
+  color: #b6e8ff; /* Light blue accent color */
+}
+
+.hero p {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  max-width: 1000px; /* Increase the width to expand the area */
+  margin: 0 auto 30px auto;
+  color: #e0e7ff; /* Soft white for readability */
+  text-align: justify; /* Justified alignment for the paragraph */
+  padding: 0 20px; /* Add a bit of padding for horizontal space */
+}
+
+
+/* CTA Button */
+.btn-cta {
+  background-color: #238636; /* Green for CTA button */
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Add hover effects */
+  text-decoration: none;
+}
+
+.btn-cta:hover {
+  background-color: #2ea043; /* Slightly darker green on hover */
+  transform: scale(1.05); /* Slightly increase button size on hover */
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem; /* Adjust font size for mobile */
+  }
+
+  .hero p {
+    font-size: 1rem;
+    max-width: 90%; /* Adjust paragraph width for smaller screens */
+  }
+
+  .btn-cta {
+    font-size: 1rem;
+    padding: 12px 20px; /* Adjust button size */
+  }
+}

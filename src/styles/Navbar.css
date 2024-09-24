@@ -1,0 +1,95 @@
+/* Styles for Navbar */
+
+body {
+  font-family: 'Questrial', sans-serif; /* Apply the Questrial font */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Center align vertically */
+  padding: 15px 20px;
+  background-color: #000000; /* Set navbar background color */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: auto;
+
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  margin-right: 40px; /* Space between brand and links */
+}
+
+.navbar-logo {
+  width: 40px;  /* Adjust the size of the logo */
+  height: auto;
+  margin-right: 10px; /* Space between logo and name */
+}
+
+.navbar-brand-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white; /* Set font color to white */
+}
+
+.navbar-links {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
+  margin: 0 15px; /* Spacing between each link */
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold; /* Make the font bold */
+  color: white; /* Set text color to white */
+  transition: color 0.3s;
+}
+
+.navbar-links li a:hover {
+  color: #007bff; /* Link hover effect */
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.btn-signup {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold; /* Make the button text bold */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-signup:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none; /* Hide links on small screens */
+  }
+
+  .btn-signup {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}

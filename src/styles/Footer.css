@@ -1,0 +1,19 @@
+.footer {
+    padding: 1rem;
+    background-color: #282c34;
+    color: white;
+    text-align: center;
+    position: relative;
+    width: auto;
+  }
+  
+  .footer-links {
+    margin-bottom: 1rem;
+  }
+  
+  .footer-links a {
+    color: white;
+    margin: 0 1rem;
+    text-decoration: none;
+  }
+  
