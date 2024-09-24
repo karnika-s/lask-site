@@ -154,7 +154,8 @@ function RobotFace() {
   useFrame(() => {
     if (robotRef.current) {
       // You can remove or adjust the automatic rotation if you prefer user-controlled rotation
-      robotRef.current.rotation.y += 0.005; // Rotate the face
+      robotRef.current.rotation.y += 0.01; 
+      // robotRef.current.rotation.x += 0.01;// Rotate the face
       if (mixer.current) {
         mixer.current.update(0.01); // Update the mixer for animations
       }

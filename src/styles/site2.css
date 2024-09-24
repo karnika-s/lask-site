@@ -1,0 +1,15 @@
+@media (min-width: 640px) {
+    .sm\:px-20 {
+        padding-left: 10rem;
+        padding-right: 10rem;
+    }
+}
+
+/* custom-styles.css */
+
+.main-heading {
+    background: linear-gradient(to right, #00bfff, #a020f0, #ff69b4); /* Add your gradient colors here */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  

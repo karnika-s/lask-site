@@ -8,7 +8,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center; /* Center align vertically */
-  padding: 15px 20px;
+  padding: 40px 50px;
   background-color: #000000; /* Set navbar background color */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   width: auto;
@@ -30,12 +30,14 @@ body {
   width: 40px;  /* Adjust the size of the logo */
   height: auto;
   margin-right: 10px; /* Space between logo and name */
+  align-items: center;
 }
 
 .navbar-brand-name {
   font-size: 1.5rem;
   font-weight: bold;
   color: white; /* Set font color to white */
+  align-items: center;
 }
 
 .navbar-links {
