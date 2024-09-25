@@ -8,11 +8,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center; /* Center align vertically */
-  padding: 40px 50px;
-  background-color: #000000; /* Set navbar background color */
+  padding: 40px 50px 0px 50px; /* Adjusted padding-bottom to 20px */  background-color: #000000; /* Set navbar background color */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   width: auto;
-
 }
 
 .navbar-left {
@@ -45,6 +43,7 @@ body {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  font-weight:normal;
 }
 
 .navbar-links li {
@@ -54,7 +53,7 @@ body {
 .navbar-links li a {
   text-decoration: none;
   font-size: 1rem;
-  font-weight: bold; /* Make the font bold */
+  /* font-weight: bold; Make the font bold */
   color: white; /* Set text color to white */
   transition: color 0.3s;
 }

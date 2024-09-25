@@ -9,7 +9,7 @@ import Navbar from './components/Navbar';
 // import Hero from './components/Hero';
 // import Pricing from './components/Pricing';
 import Footer from './components/Footer';
-// import Hero2 from './components/Hero2';
+import Hero from './components/Hero';
 // import Robot from './components/RobotFace'; // Adjust this path to where RobotCanvas is located
 import Site from './components/site2';
 
@@ -18,7 +18,8 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Navbar/>
-        <Site/>
+        {/* <Site/> */}
+        <Hero/>
         <Footer/>
       </header>
 

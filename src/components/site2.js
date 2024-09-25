@@ -12,13 +12,6 @@ const Hero = () => {
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             <div className="shrink-0">
-              {/* <a href="#" title="" className="flex">
-                <img
-                  className="w-auto h-9"
-                  src="https://landingfoliocom.imgix.net/store/collection/dusk/images/logo.svg"
-                  alt="Company Logo"
-                />
-              </a> */}
             </div>
 
             <div className="flex md:hidden">
@@ -70,63 +63,10 @@ const Hero = () => {
 
           {expanded && (
             <nav className="flex flex-col pt-8 pb-4 space-y-6 md:hidden">
-              {/* <a href="#" title="" className="text-base font-normal text-gray-400 transition-all duration-200 hover:text-white">
-                Products
-              </a>
-              <a href="#" title="" className="text-base font-normal text-gray-400 transition-all duration-200 hover:text-white">
-                Features
-              </a>
-              <a href="#" title="" className="text-base font-normal text-gray-400 transition-all duration-200 hover:text-white">
-                Pricing
-              </a>
-              <a href="#" title="" className="text-base font-normal text-gray-400 transition-all duration-200 hover:text-white">
-                Support
-              </a>
-              <a href="#" title="" className="relative inline-flex items-center justify-center w-full px-6 py-2 text-base font-normal text-white bg-black border border-transparent rounded-full">
-                Start free trial
-              </a> */}
             </nav>
           )}
         </div>
       </header>
-
-      {/* <section className="relative py-12 bg-black sm:pb-16 lg:pb-20 xl:pb-24">
-        <div className="px-4 mx-auto max-w-7xl">
-          <div className="grid items-center grid-cols-1 gap-y-12 lg:grid-cols-2 gap-x-16">
-            <div>
-              <h3 className="text-3xl font-normal text-white sm:text-3xl lg:text-4xl xl:text-5xl">
-              Transform Your Development Workflow with LASK.AI
-              </h3>
-              <p className="mt-4 text-lg font-normal text-gray-400  sm:mt-8">
-             
-            From real-time code generation to smart debugging, LASK AI provides intelligent, context-aware suggestions that
-            accelerate project delivery while enhancing code quality.              
-            </p>
-
-              <form action="#" method="POST" className="relative mt-8 rounded-full sm:mt-12">
-                <div className="relative">
-                  <div className="absolute rounded-full -inset-px bg-gradient-to-r from-cyan-500 to-purple-500"></div>
-                  <div className="relative">
-                    <div className="absolute inset-y-0 left-0 flex items-center pl-6">
-                      
-                    </div>
-            
-                  </div>
-                  
-                </div>
-           
-              </form>
-
-
-            </div> */}
-
-            {/* Right column for ThreeCanvas */}
-            {/* <div className="flex justify-center">
-              <ThreeCanvas />
-            </div>
-          </div>
-        </div>
-      </section> */}
 
 <section className="relative py-0 bg-black sm:pb-16 lg:pb-20 xl:pb-24 gap-y-0">
   <div className="px-4 mx-auto max-w-7xl">

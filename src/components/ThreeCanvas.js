@@ -10,8 +10,8 @@ const ThreeCanvas = () => {
   style={{ width: '600px', height: '600px' }} // Change to your desired size
   camera={{ position: [0, 0, 5], fov: 75 }} // Set the camera position and field of view
 >
-  <ambientLight intensity={1} /> {/* Overall light for basic illumination */}
-  <directionalLight position={[0, 1, 1]} intensity={1} /> {/* Sunlight-like effect */}
+  <ambientLight intensity={2.3} /> {/* Overall light for basic illumination */}
+  <directionalLight position={[5, 5, 5]} intensity={1} /> {/* Sunlight-like effect */}
   
   <spotLight 
     position={[0, 10, 0]} 
