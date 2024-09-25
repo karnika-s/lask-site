@@ -1,9 +1,13 @@
 import { useState } from "react";
 import ThreeCanvas from './ThreeCanvas'; // Adjust the path accordingly
 import '../styles/Hero.css';  // Custom styles for the component
+import HeroVideoDialog from './magicui/Video'; // Adjust the path accordingly
+
 
 const Hero = () => {
   const [expanded, setExpanded] = useState(false);
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
+
 
   return (
     <>
@@ -100,11 +104,38 @@ const Hero = () => {
   >
     Download Extension
   </a>
+
+  {/* <div className="button-background"></div>
+  <a 
+    // href="https://marketplace.visualstudio.com/items?itemName=skychat.lask-ai"
+    className="button"
+    title="signup"
+  >
+    Sign Up
+  </a> */}
 </div>
+
+
+{/* <p> we have video component here</p> */}
+             {/* Video Dialog Trigger */}
+          <div onClick={() => setIsVideoOpen(true)} className="cursor-pointer">
+        <span className="text-white">
+
+        </span>
+      </div>
+
+      {/* HeroVideoDialog Component */}
+      <HeroVideoDialog
+        videoSrc="https://www.youtube.com/embed/qh3NGpYRG3I?si=4rb-zSdDkVK9qxxb"
+        thumbnailSrc="https://startup-template-sage.vercel.app/hero-light.png"
+        thumbnailAlt="Hero Video"
+        animationStyle="from-center"
+        className="my-4"
+      /> 
 
             {/* Canvas Component */}
             <div className="py-0 mt-0">
-              <div className="flex justify-center">
+              <div className="flex justify-start">
                 <ThreeCanvas />
               </div>
             </div>

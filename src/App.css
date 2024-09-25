@@ -4,24 +4,7 @@
   margin: 0;
   padding: 0;
   width:auto; /* Full viewport width */
+  background-color: black;
+  padding-top: 20px;
 }
 
-h1 {
-  color: #333;
-}
-
-.navbar {
-  background-color: #282c34;
-  padding: 20px;
-  color: white;
-  width: 100%;
-}
-
-.footer {
-  background-color: #282c34;
-  padding: 10px;
-  color: white;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}

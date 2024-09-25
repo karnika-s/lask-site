@@ -12,14 +12,19 @@ import Footer from './components/Footer';
 import Hero from './components/Hero';
 // import Robot from './components/RobotFace'; // Adjust this path to where RobotCanvas is located
 import Site from './components/site2';
+// import Video from './components/HeroVideoDialogDemo';
+
+import CursorDot from './components/CursorDot';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
+      {/* <CursorDot /> */}
         <Navbar/>
         {/* <Site/> */}
         <Hero/>
+        {/* <Video/> */}
         <Footer/>
       </header>
 
