@@ -1,10 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import React from 'react';
-// import { Canvas } from '@react-three/fiber'; // Import Canvas from @react-three/fiber
-// import { OrbitControls, Stars } from '@react-three/drei'; // Import OrbitControls and Stars from @react-three/drei
-// import Earth from './components/Earth'; // Import Earth component
-// import Trending from './components/Trending';
 import Navbar from './components/Navbar';
 // import Hero from './components/Hero';
 // import Pricing from './components/Pricing';
@@ -15,20 +11,30 @@ import Site from './components/site2';
 // import Video from './components/HeroVideoDialogDemo';
 
 import CursorDot from './components/CursorDot';
+import Features from './components/Features'; // Import the new page
+import ComingSoon from './components/ComingSoon';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-      {/* <CursorDot /> */}
-        <Navbar/>
-        {/* <Site/> */}
-        <Hero/>
-        {/* <Video/> */}
-        <Footer/>
-      </header>
-
-    </div>
+    <Router> {/* Wrap your app inside the Router */}
+      <div className="App">
+        <header className="App-header">
+          {/* Navbar should be inside Router */}
+          <Navbar /> {/* Navbar now contains links */}
+          
+          {/* Define the routes */}
+          <Routes>
+            <Route path="/" element={<Hero />} /> {/* Home page */}
+            <Route path="/features" element={<Features />} /> {/* Features page */}
+            <Route path="/comingsoon" element={<ComingSoon/>}/> {/* Coming Soon page */}
+            {/* You can add more routes here for other pages */}
+          </Routes>
+          
+          <Footer />
+        </header>
+      </div>
+    </Router>
     
   );
 }

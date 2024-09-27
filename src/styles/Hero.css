@@ -1,4 +1,9 @@
 /* Header styles */
+
+body{
+  font-family: 'Questrial', sans-serif;
+  font-weight: 400;
+}
 .hero-header {
   padding-top: 1rem;
   padding-bottom: 1rem;

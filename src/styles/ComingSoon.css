@@ -1,0 +1,31 @@
+/* General Styling */
+body {
+    margin: 0;
+    background-color: #000000;
+    color: #e0e0e0;
+    font-family: 'Questrial', sans-serif;
+    font-weight: 400;
+}
+/* Coming Soon Section */
+.coming-soon-page {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.coming-soon-container {
+    text-align: center;
+    color: #fff;
+}
+
+.coming-soon-container h1 {
+    font-size: 5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    background: linear-gradient(283deg, #00b4d8, #a855f7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}

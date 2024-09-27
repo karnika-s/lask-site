@@ -1,19 +1,92 @@
-.footer {
-    padding: 1rem;
-    background-color: #000000;
-    color: white;
-    text-align: center;
-    position: relative;
-    width: auto;
-  }
-  
-  .footer-links {
-    margin-bottom: 1rem;
-  }
-  
-  .footer-links a {
-    color: white;
-    margin: 0 1rem;
-    text-decoration: none;
-  }
-  
+.footer-container {
+  display: flex;                /* Use flexbox for layout */
+  flex-wrap: wrap;             /* Allow items to wrap onto the next line if needed */
+  justify-content: space-between; /* Space out the columns */
+  margin-top: 2rem;            /* Add some top margin */
+  flex-direction: row-reverse;
+  padding-bottom: 40px;
+}
+
+.footer-nav {
+  flex: 1;                     /* Allow each nav section to take equal space */
+  min-width: 200px;           /* Set a minimum width for each column */
+  margin-right: 20px;         /* Add margin to the right of each column */
+}
+
+.footer-nav:last-child {
+  margin-right: 0;            /* Remove margin from the last column */
+}
+
+.footer-title {
+  font-size: 1.5rem;         /* Set title font size */
+  margin-bottom: 1rem;       /* Space below the title */
+  text-align: left;
+  padding-left: 110px;  
+}
+
+.footer-list {
+  list-style: none;           /* Remove bullet points */
+  padding-left:110px;                 /* Remove default padding */
+  margin: 0;                  /* Remove default margin */
+  text-align:left;
+  /* text-align:justify; */
+}
+
+.footer-list li {
+  margin-bottom: 0.5rem;      /* Space between list items */
+}
+
+.footer-list a {
+  color: #c1b8b8;             /* Set link color */
+  text-decoration: none;       /* Remove underline from links */
+  font-size: 1rem;            /* Set font size */
+}
+
+.footer-list a:hover {
+  color: #0056b3;              /* Change color on hover */
+}
+
+.social-media {
+  display: flex;               
+  gap: 1rem;                  /* Add space between icons */
+  flex-direction:row;      /* Align icons in a column */
+  align-items:center;     /* Align items to the start */
+  justify-content: center;
+  padding:5px 10px;
+}
+
+.social-media a {
+  color: #c1b8b8;              /* Default color for icons */
+  transition: transform 0.2s, background-color 0.2s; /* Smooth transition for transform and background color */
+  border-radius: 50%;          /* Make the bubble circular */
+  padding: 5px 5px;             /* Add padding to create space around icons */
+  display: flex;               /* Use flex to center icon */
+  justify-content: center;     /* Center icon horizontally */
+  align-items: center;         /* Center icon vertically */
+}
+
+.social-media a:hover {
+  color: #0056b3;              /* Change color on hover */
+  transform: scale(1.2);       /* Scale up the icon */
+  background-color: rgba(200, 200, 200, 0.2); /* Add a light background color for the bubble effect */
+}
+
+.social-bubble {
+   
+  display: inline-flex;           
+  margin: 0.5rem;                        
+  border-radius: 35px;                        /* Round the edges of the bubble */
+  border: 0.1px solid transparent;               /* Create a transparent border */
+  background-image: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)), linear-gradient(to right,  #06b6d4, #a855f7); /* Gradient border */
+  background-origin: border-box;               /* Set the background to cover the border */
+  background-clip: content-box, border-box;    /* Ensure the gradient is clipped to the border */
+  transition: box-shadow 0.3s;                 /* Smooth transition for box-shadow */
+  margin-bottom: 40px;
+  /* margin-left: -0.5rem;                       Slight negative margin to reduce left space */
+  /* margin-right: -0.5rem;     */
+  /* padding: 0.5rem 1rem;  */
+}
+
+.social-bubble:hover {
+  box-shadow: 0 0 20px  #06b6d4; /* Glow effect on hover */
+}

@@ -1,0 +1,179 @@
+/* General Styling */
+body {
+    margin: 0;
+    background-color: #000000;
+    color: #e0e0e0;
+    font-family: 'Questrial', sans-serif;
+    font-weight: 400;
+}
+h3{
+  font-size: 1.5rem; /* Bigger font for premium look */
+}
+
+/* Features Section */
+.lask-features {
+    padding: 70px;
+    text-align: center;
+}
+
+.lask-features h2 {
+    font-size: 3.5rem;
+    /* margin-bottom: 60px; */
+    /* font-weight: bolder; */
+    color: #ffffff;
+    /* text-transform: uppercase; */
+    /* font-family: 'Overpass', sans-serif; */
+    letter-spacing: 2px;
+    font-weight: 700;
+    /* color: #ffffff; */
+    /* text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); */
+    background: linear-gradient(283deg, #24282d, #ffffff) ;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Feature List */
+.feature-list {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    gap: 60px; /* Increased spacing for elegance */
+}
+
+/* Feature Item */
+.feature-item {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center items horizontally */
+    flex-direction: row-reverse;
+    margin: 50px;
+}
+
+/* Reverse Class for Alternate Layout */
+.feature-item.reverse {
+    flex-direction: row-reverse; /* Reverse the order for right-aligned videos */
+}
+
+/* Feature Video */
+.feature-video {
+    width: 40%; /* Adjusted for better focus */
+    border-radius: 15px; /* Softer, more premium look */
+    /* box-shadow: 0 8px 30px rgba(0, 186, 255, 0.5); Neon blue shadow */
+    transition: transform 0.4s ease, box-shadow 0.4s ease; /* Smooth transformation */
+    background: linear-gradient(145deg, #1b1b1b, #282828); /* Sleek, darker gradient */
+}
+
+/* Hover Effect */
+.feature-video:hover {
+    transform: scale(1.08); /* Slightly larger scale for luxurious feel */
+    box-shadow: 0 10px 40px rgba(0, 186, 255, 0.5); /* Purple glow on hover */
+}
+
+/* Feature Description */
+.feature-description {
+    width: 50%; /* Adjust width as needed */
+    padding: 30px;
+    text-align: left; /* Align text to the left */
+    color: #f1f1f1;
+    background-color: rgba(255, 255, 255, 0.05); /* Subtle transparent background */
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1); /* Subtle light shadow */
+    transition: background-color 0.4s ease, transform 0.3s ease;
+    margin: 80px;
+    border-left: 5px solid #00b4d8; /* Accent neon blue border */
+}
+
+.feature-description:hover {
+    background-color: rgba(255, 255, 255, 0.15); /* Lighter background on hover */
+    transform: translateX(10px); /* Slight movement on hover */
+}
+
+.feature-description h3 {
+    font-size: 2.5rem; /* Bigger font for premium look */
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(90deg, #00b4d8, #ff3f3f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Gradient text */
+}
+
+.feature-description p {
+    font-size: 1.5rem; /* Large, readable font */
+    line-height: 1.8; /* Improve readability */
+    color: #c7c7c7;
+    margin: 0;
+}
+
+/* Footer */
+.lask-footer {
+    padding: 50px;
+    text-align: center;
+    background-color: #101010;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.lask-footer p {
+    margin: 0;
+    color: #c7c7c7;
+    font-size: 1.2rem;
+}
+/* Gradient background */
+/* Container for gradient effect and button */
+.button-container {
+    position: relative;
+    display: inline-flex;
+    margin-top: 2rem; /* mt-8 */
+  }
+  
+  /* Background gradient */
+  /* Container for the gradient background and button */
+  .button-container {
+    position: relative;
+    display: inline-flex;
+  }
+  
+  @media (min-width: 768px) {
+    .button-container {
+      display: inline-flex; /* Show button on medium and larger screens */
+    }
+  }
+  
+  /* Gradient background */
+  .button-background {
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    bottom: -1px;
+    left: -1px;
+    border-radius: 9999px; /* Full rounded corners */
+    background: linear-gradient(to right, #06b6d4, #a855f7); /* from-cyan-500 to-purple-500 */
+    transition: all 0.2s ease; /* Smooth transition for shadow */
+  }
+  
+  .button-background:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow on hover */
+  }
+  
+  /* Button */
+  .button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1.5rem; /* px-6 py-2 */
+    font-size: 1rem; /* text-base */
+    font-weight: normal; /* font-normal */
+    color: white;
+    background-color: black;
+    border: 1px solid transparent;
+    border-radius: 9999px; /* Fully rounded */
+    cursor: pointer;
+    transition: background-color 0.2s ease; /* Smooth background change */
+  }
+  
+  .button:hover {
+    background-color: #1f2937; /* Slightly darker black on hover */
+  }
+  
+  

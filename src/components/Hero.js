@@ -1,13 +1,25 @@
-import { useState } from "react";
+import React, { useState, useRef } from 'react'; // Import useRef with useState
+
 import ThreeCanvas from './ThreeCanvas'; // Adjust the path accordingly
 import '../styles/Hero.css';  // Custom styles for the component
 import HeroVideoDialog from './magicui/Video'; // Adjust the path accordingly
+// import AnimatedBeamMultipleOutputDemo from './magicui/Tree.ts';
+// import {AnimatedBeam} from './magicui/Tree'; // Adjust the path accordingly
+
+import Newsletter from "./Newsletter"
+import Short from "./Short"
+
+
 
 
 const Hero = () => {
   const [expanded, setExpanded] = useState(false);
   const [isVideoOpen, setIsVideoOpen] = useState(false);
 
+  // Create refs for AnimatedBeam
+  const beamStartRef = useRef(null);
+  const beamEndRef = useRef(null);
+  const containerRef = useRef(null); // To hold the container reference
 
   return (
     <>
@@ -101,18 +113,10 @@ const Hero = () => {
     href="https://marketplace.visualstudio.com/items?itemName=skychat.lask-ai"
     className="button"
     title="Download Extension"
+    target='_blank'
   >
     Download Extension
   </a>
-
-  {/* <div className="button-background"></div>
-  <a 
-    // href="https://marketplace.visualstudio.com/items?itemName=skychat.lask-ai"
-    className="button"
-    title="signup"
-  >
-    Sign Up
-  </a> */}
 </div>
 
 
@@ -126,12 +130,25 @@ const Hero = () => {
 
       {/* HeroVideoDialog Component */}
       <HeroVideoDialog
-        videoSrc="https://www.youtube.com/embed/qh3NGpYRG3I?si=4rb-zSdDkVK9qxxb"
+        videoSrc="https://www.youtube.com/embed/2TqRJQR4AgQ?si=An2pEZojWiYPGnOo"
         thumbnailSrc="https://startup-template-sage.vercel.app/hero-light.png"
         thumbnailAlt="Hero Video"
         animationStyle="from-center"
         className="my-4"
       /> 
+
+      {/* add beam here  */}
+        {/* Positioning the refs */}
+        {/* <div ref={beamStartRef} className="absolute" style={{ top: '50px', left: '50px' }}></div>
+          <div ref={beamEndRef} className="absolute" style={{ top: '300px', left: '300px' }}></div> */}
+
+          {/* Add the AnimatedBeam component */}
+          {/* <AnimatedBeam  */}
+            {/* // containerRef={containerRef} 
+            // fromRef={beamStartRef} 
+            // toRef={beamEndRef} 
+            // className="absolute z-20" // Adjust z-index to ensure it appears above other elements */}
+          {/* /> */}
 
             {/* Canvas Component */}
             <div className="py-0 mt-0">
@@ -140,7 +157,17 @@ const Hero = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div>     
+      </section>
+       {/* <Short/> */}
+      {/* <section>
+        <Short/>
+        </section> */}
+
+      {/* additional components */}
+
+      <section >
+        <Newsletter/>
       </section>
     </>
   );
@@ -150,164 +177,4 @@ export default Hero;
 
 
 
-
-// import { useState } from "react";
-// import ThreeCanvas from './ThreeCanvas'; 
-// import { GlobeDemo } from './GlobeDemo';  // Import the GlobeDemo component
-// import '../styles/Hero.css';  
-
-// const Hero = () => {
-//   const [expanded, setExpanded] = useState(false);
-
-//   return (
-//     <>
-//       <div className="relative h-screen w-screen"> {/* Full screen container to hold everything */}
-        
-//         {/* Globe Demo as background */}
-//         {/* <GlobeDemo className="absolute inset-0 z-0" />  */}
-//         {/* The z-0 ensures the globe stays in the background */}
-        
-//         <header className="hero-header z-10 relative"> {/* z-10 to ensure it's above the globe */}
-//           <div className="container">
-//             <div className="flex items-center justify-between">
-//               {/* Mobile Hamburger Menu */}
-//               <div className="flex md:hidden">
-//                 <button
-//                   type="button"
-//                   className="text-white"
-//                   onClick={() => setExpanded(!expanded)}
-//                   aria-expanded={expanded}
-//                   aria-label="Toggle Navigation"
-//                 >
-//                   {/* Add SVG for hamburger menu */}
-//                 </button>
-//               </div>
-//             </div>
-//           </div>
-//         </header>
-
-//         <section className="hero-section z-10 relative"> {/* z-10 to ensure it's above the globe */}
-//           <div className="absolute inset-0 flex flex-col items-center justify-center"> {/* Centering content */}
-//             <h2 className="hero-title text-white">
-//               Transform Your Development Workflow with
-//             </h2>
-
-//             <h2 className="main-heading text-white">
-//               LASK.AI
-//             </h2>
-
-//             <p className="hero-description text-white">
-//               From real-time code generation to smart debugging, LASK AI provides intelligent, context-aware suggestions that
-//               accelerate project delivery while enhancing code quality.
-//             </p>
-
-//             <div className="relative hidden md:inline-flex">
-//               <a 
-//                 href="https://marketplace.visualstudio.com/items?itemName=skychat.lask-ai"
-//                 className="relative inline-flex items-center justify-center px-6 py-2 text-base font-normal text-white bg-black border border-transparent rounded-full mt-8"
-//                 title="Download Extension"
-//               >
-//                 Download Extension
-//               </a>
-//             </div>
-
-//             {/* Canvas Component */}
-//             <div className="py-0 mt-0">
-//               <div className="flex justify-center">
-//                 <ThreeCanvas />
-//               </div>
-//             </div>
-//           </div>
-//         </section>
-//       </div>
-//     </>
-//   );
-// };
-
-// export default Hero;
-
-
-
-
-// import { useState } from "react";
-// import ThreeCanvas from './ThreeCanvas'; 
-// import { GlobeDemo } from './GlobeDemo';  // Import the GlobeDemo component
-// import '../styles/Hero.css';  
-
-// const Hero = () => {
-//   const [expanded, setExpanded] = useState(false);
-
-//   return (
-//     <>
-//       <div className="relative w-screen flex flex-col justify-start items-center"> {/* Adjust height to fit content naturally */}
-        
-//         {/* Navigation / Header */}
-//         <header className="hero-header w-full fixed top-0 z-10"> {/* Fixed header, always on top */}
-//           <div className="container">
-//             <div className="flex items-center justify-between">
-//               {/* Mobile Hamburger Menu */}
-//               <div className="flex md:hidden">
-//                 <button
-//                   type="button"
-//                   className="text-white"
-//                   onClick={() => setExpanded(!expanded)}
-//                   aria-expanded={expanded}
-//                   aria-label="Toggle Navigation"
-//                 >
-//                   {/* Add SVG for hamburger menu */}
-//                 </button>
-//               </div>
-//             </div>
-//           </div>
-//         </header>
-
-//         {/* Main Content Section */}
-//         <section className="hero-section z-10 flex flex-col items-center justify-center mt-28"> {/* Added margin to prevent overlap with navbar */}
-          
-//           {/* Heading Section */}
-//           <div className="text-center">
-//             <h2 className="hero-title text-white">
-//               Transform Your Development Workflow with
-//             </h2>
-
-//             <h2 className="main-heading text-white">
-//               LASK.AI
-//             </h2>
-
-//             <p className="hero-description text-white">
-//               From real-time code generation to smart debugging, LASK AI provides intelligent, context-aware suggestions that
-//               accelerate project delivery while enhancing code quality.
-//             </p>
-
-//             {/* Button Section */}
-//             <div className="relative hidden md:inline-flex">
-//               <a 
-//                 href="https://marketplace.visualstudio.com/items?itemName=skychat.lask-ai"
-//                 className="relative inline-flex items-center justify-center px-6 py-2 text-base font-normal text-white bg-black border border-transparent rounded-full mt-8"
-//                 title="Download Extension"
-//               >
-//                 Download Extension
-//               </a>
-//             </div>
-//           </div>
-
-//           {/* Globe Section */}
-//           <div className="mt-10 flex justify-center items-center"> {/* Ensure the globe stays centered */}
-//             <div className="relative">
-//               <GlobeDemo className="w-[300px] h-[300px] z-10" /> {/* Set an appropriate size for the globe */}
-//             </div>
-//           </div>
-
-//           {/* Robot Section */}
-//           <div className="mt-10 flex justify-center items-center"> {/* Keep the robot below the globe */}
-//             <ThreeCanvas /> {/* Robot model */}
-//           </div>
-
-//         </section>
-//       </div>
-//     </>
-//   );
-// };
-
-// export default Hero;
 

@@ -1,0 +1,111 @@
+/* General Styling */
+body {
+    margin: 0;
+    font-family: 'Questrial', sans-serif;
+    background-color: #000; /* Dark background */
+}
+
+/* Notification Section */
+.notification-container {
+    padding:10px;
+    margin:10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 50vh;
+    text-align: left;
+    margin-left: 100px;
+    padding-left: 50px;
+    margin-bottom:80px;
+    border-radius: 15px;
+    background: linear-gradient(145deg, #19191a, #000000);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.notification-container h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.notification-container p {
+    font-size: 1.2rem;
+    color: #cfcfcf;
+    margin-bottom: 20px;
+}
+
+.email-input-section {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.email-input-section input {
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 40px;
+    width: 300px;
+}
+
+/* Gradient background */
+/* Container for gradient effect and button */
+.button-container {
+    position: relative;
+    display: inline-flex;
+    margin-top: 2rem; /* mt-8 */
+  }
+  
+  /* Background gradient */
+  /* Container for the gradient background and button */
+  .button-container {
+    position: relative;
+    display: inline-flex;
+    margin-left: 20px;
+  }
+  
+  @media (min-width: 768px) {
+    .button-container {
+      display: inline-flex; /* Show button on medium and larger screens */
+    }
+  }
+  
+  /* Gradient background */
+  .button-background {
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    bottom: -1px;
+    left: -1px;
+    border-radius: 9999px; /* Full rounded corners */
+    background: linear-gradient(to right, #06b6d4, #a855f7); /* from-cyan-500 to-purple-500 */
+    transition: all 0.2s ease; /* Smooth transition for shadow */
+  }
+  
+  .button-background:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow on hover */
+  }
+  
+  /* Button */
+  .button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1.5rem; /* px-6 py-2 */
+    font-size: 1rem; /* text-base */
+    font-weight: normal; /* font-normal */
+    color: white;
+    background-color: black;
+    border: 1px solid transparent;
+    border-radius: 9999px; /* Fully rounded */
+    cursor: pointer;
+    transition: background-color 0.2s ease; /* Smooth background change */
+  }
+  
+  .button:hover {
+    background-color: #1f2937; /* Slightly darker black on hover */
+  }
+  
+  
