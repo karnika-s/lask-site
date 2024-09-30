@@ -1,25 +1,31 @@
-/* General Styles */
-/* body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #121212; /* Black background */
-    /* color: #ffffff; White text */
-    /* display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; */
-/* } */ 
-
 /* Form Container */
 form {
     background-color: #1e1e1e; /* Dark gray background */
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    width: 300px;
+    width: 320px; /* Slightly wider form */
     display: flex;
     flex-direction: column;
+    align-items: center; /* Center align items in the form */
+    margin: 0 auto; /* Center the form on the page */
+    position: relative; /* For absolute positioning of heading and tagline */
+}
+
+/* Heading */
+h1 {
+    font-size: 24px; /* Larger font size */
+    margin-bottom: 10px; /* Space below the heading */
+    text-align: center; /* Center align heading */
+    color: #ffffff; /* White color for the heading */
+}
+
+/* Tagline */
+p.tagline {
+    font-size: 14px; /* Smaller font size */
+    margin-bottom: 20px; /* Space below the tagline */
+    color: #aaaaaa; /* Lighter color for tagline */
+    text-align: center; /* Center align tagline */
 }
 
 /* Input Fields */
@@ -33,6 +39,7 @@ input {
     border-radius: 5px;
     outline: none;
     transition: background-color 0.3s ease-in-out;
+    width: 100%; /* Full width for inputs */
 }
 
 input::placeholder {
@@ -53,6 +60,7 @@ button {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
+    width: 100%; /* Full width for button */
 }
 
 button:hover {
@@ -66,7 +74,7 @@ button:active {
 /* Responsive Design */
 @media (max-width: 400px) {
     form {
-        width: 100%;
+        width: 90%; /* Adjust width for smaller screens */
         padding: 20px;
     }
 
