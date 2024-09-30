@@ -13,6 +13,9 @@ import Site from './components/site2';
 import CursorDot from './components/CursorDot';
 import Features from './components/Features'; // Import the new page
 import ComingSoon from './components/ComingSoon';
+import Short from './components/Short';
+import Home from './components/Home';
+import Register from './components/Register';
 
 
 function App() {
@@ -25,9 +28,13 @@ function App() {
           
           {/* Define the routes */}
           <Routes>
-            <Route path="/" element={<Hero />} /> {/* Home page */}
-            <Route path="/features" element={<Features />} /> {/* Features page */}
-            <Route path="/comingsoon" element={<ComingSoon/>}/> {/* Coming Soon page */}
+            <Route path="/" element={<Home />} /> {/* Home page */}
+            {/* <Route path="/" element={<Short/>} /> Home page */}
+            <Route path="/features" element={<Features />} /> 
+            {/* Features page */}
+            <Route path="/comingsoon" element={<ComingSoon/>}/> 
+            {/* Coming Soon page */}
+            <Route path="/register" element={<Register/>}/> 
             {/* You can add more routes here for other pages */}
           </Routes>
           

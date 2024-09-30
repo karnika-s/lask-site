@@ -22,7 +22,7 @@ body{
 /* Hero section styling */
 .hero-section {
   padding-top: 50px;
-  padding-bottom: 6rem; /* sm:pb-16 lg:pb-20 xl:pb-24 in Tailwind */
+  /* padding-bottom: 6rem; sm:pb-16 lg:pb-20 xl:pb-24 in Tailwind */
   background-color: black;
   /* new */
   position: relative;

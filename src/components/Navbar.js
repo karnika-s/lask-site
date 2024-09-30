@@ -25,15 +25,15 @@ const Navbar = () => {
       </div>
 
 
-      <div className="button2-container">
+      {/* <div className="button2-container">
         <div className="button2-background"></div>
         <a className="button2" title="signup">Sign up</a>
-      </div>
-
-      {/* <div className="button-container download-button-container">
-        <div className="button-background"></div>
-        <a className="button" title="download-extension">Download Extension</a>
       </div> */}
+            {/* Sign up Button Redirects to register.js */}
+            <div className="button2-container">
+        <div className="button2-background"></div>
+        <Link to="/register" className="button2" title="signup">Sign up</Link>
+      </div>
 
       <div className="hamburger" onClick={toggleMenu}>
         <div className={`line ${isOpen ? 'open' : ''}`}></div>

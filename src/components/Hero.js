@@ -6,11 +6,7 @@ import HeroVideoDialog from './magicui/Video'; // Adjust the path accordingly
 // import AnimatedBeamMultipleOutputDemo from './magicui/Tree.ts';
 // import {AnimatedBeam} from './magicui/Tree'; // Adjust the path accordingly
 
-import Newsletter from "./Newsletter"
-import Short from "./Short"
-
-
-
+import Newsletter from "./Newsletter";
 
 const Hero = () => {
   const [expanded, setExpanded] = useState(false);
@@ -24,16 +20,16 @@ const Hero = () => {
   return (
     <>
       {/* Header Section */}
-      <header className="hero-header">
+      {/* <header className="hero-header">
         <div className="container">
           <div className="flex items-center justify-between">
-            <div className="shrink-0">
+            <div className="shrink-0"> */}
               {/* Logo or Branding if needed */}
-            </div>
+            {/* </div> */}
 
             {/* Mobile Hamburger Menu */}
-            <div className="flex md:hidden">
-              <button
+            {/* <div className="flex md:hidden"> */}
+              {/* <button
                 type="button"
                 className="text-white"
                 onClick={() => setExpanded(!expanded)}
@@ -72,22 +68,22 @@ const Hero = () => {
                   </svg>
                 )}
               </button>
-            </div>
+            </div> */}
 
             {/* Desktop Navigation Links */}
-            <nav className="hidden space-x-10 lg:ml-20 lg:space-x-12 md:flex">
+            {/* <nav className="hidden space-x-10 lg:ml-20 lg:space-x-12 md:flex"> */}
               {/* Add your navigation links here */}
-            </nav>
-          </div>
+            {/* </nav>
+          </div> */}
 
           {/* Mobile Navigation Links */}
-          {expanded && (
-            <nav className="flex flex-col pt-8 pb-4 space-y-6 md:hidden">
+          {/* {expanded && ( */}
+            {/* <nav className="flex flex-col pt-8 pb-4 space-y-6 md:hidden"> */}
               {/* Add your mobile navigation links here */}
-            </nav>
-          )}
+            {/* </nav> */}
+          {/* )}
         </div>
-      </header>
+      </header> */}
 
       {/* Hero Section */}
       <section className="hero-section">
@@ -158,16 +154,6 @@ const Hero = () => {
             </div>
           </div>
         </div>     
-      </section>
-       {/* <Short/> */}
-      {/* <section>
-        <Short/>
-        </section> */}
-
-      {/* additional components */}
-
-      <section >
-        <Newsletter/>
       </section>
     </>
   );
