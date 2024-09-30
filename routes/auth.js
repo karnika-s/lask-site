@@ -4,8 +4,29 @@ const jwt = require('jsonwebtoken');
 const Users = require('../models/Users');
 const router = express.Router();
 const dotenv = require('dotenv');
+const nodemailer = require('nodemailer'); // Import Nodemailer
+
 
 dotenv.config();
+
+// Create transporter object for Nodemailer
+const transporter = nodemailer.createTransport({
+    host: 'smtp.gmail.com',
+    port: 587,
+    secure: false,
+    auth: {
+        user: process.env.EMAIL_USER, // Env variable for email
+        pass: process.env.EMAIL_PASS, // Env variable for email password
+    },
+    logger: true,  // Enable debug logging
+    debug: true,   // Enable detailed output
+});
+
+// Function to generate a random token (placeholder function)
+function generateToken() {
+    return Math.random().toString(36).substring(2);
+}
+
 
 // Register User
 router.post('/register', async (req, res) => {
@@ -26,11 +47,34 @@ router.post('/register', async (req, res) => {
         newUser.token = token;
         await newUser.save(); // Save token in the database
 
-        res.status(201).json({ token });
-    } catch (error) {
+
+        // Email options
+        const mailOptions = {
+            from: process.env.EMAIL_USER, // Your email
+            to: email,
+            subject: 'LASK.AI Registration Token',
+            text: `Hello!  Welcome to LASK.AI. Your registration token is: ${token} . Please use this token to login and use the amazing features of LASK AI`,
+            html: `<p>Hello!</p> <p>Welcome to LASK.AI. Your registration token for LASK.AI is: <strong>${token}</strong></p> <p>Please use this token to login and use the amazing features of LASK AI</p>`,
+        };
+
+        // Send the email
+        await transporter.sendMail(mailOptions, (err, info) => {
+            if (err) {
+                console.error('Error sending email:', err);
+                return res.status(500).json({ message: 'Error sending email' });
+            }
+            console.log('Email sent:', info.response);
+            res.status(201).json({ token }); // Send the response here, after the email is sent successfully
+        });
+
+        // res.status(201).json({ token });
+    } 
+    catch (error) {
+        console.error('Server error:', error);
         res.status(500).json({ message: 'Server error' });
     }
 });
+
 
 // Login User
 router.post('/login', async (req, res) => {
@@ -53,6 +97,7 @@ router.post('/login', async (req, res) => {
 
         res.json({ token });
     } catch (error) {
+        console.error('Login error:', error); // Log error details for debugging
         res.status(500).json({ message: 'Server error' });
     }
 });

@@ -12,14 +12,17 @@ const UserSchema = new mongoose.Schema({
         required: true,
         minlength: 6, // Enforce a minimum length for passwords
     },
-    projectToken: {
+    token: {  // Add token field
         type: String,
-        required: false, // Project token for the team
     },
-    userToken: {
-        type: String,
-        required: false, // Unique user ID token
-    },
+    // projectToken: {
+    //     type: String,
+    //     required: false, // Project token for the team
+    // },
+    // userToken: {
+    //     type: String,
+    //     required: false, // Unique user ID token
+    // },
 }, {
     timestamps: true, // Automatically create createdAt and updatedAt fields
 });
