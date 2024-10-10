@@ -11,6 +11,7 @@ import ComingSoon from './components/ComingSoon';
 import Home from './components/Home';
 import Register from './components/Register';
 import Login from './components/Login';
+import Success from './components/Success';
 
 
 function App() {
@@ -32,6 +33,8 @@ function App() {
             <Route path="/register" element={<Register/>}/> 
             {/* You can add more routes here for other pages */}
             <Route path="/login" element={<Login/>}/> 
+
+            <Route path="/success" element={<Success />} /> {/* Success page */}
 
           </Routes>
           

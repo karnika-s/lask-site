@@ -1,0 +1,98 @@
+/* Login container with cool dark theme */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #121212; /* Black background */
+    padding: 20px;
+    color: #E0E0E0; /* Light grey text for better contrast */
+    font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+    color: #00bcd4; /* Cool cyan for the header */
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+form {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #1E1E1E; /* Darker grey background for the form */
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    color: #00bcd4; /* Cool cyan for labels */
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #333333; /* Dark input field */
+    border: 2px solid #555555; /* Subtle grey border */
+    border-radius: 5px;
+    color: #ffffff; /* White text */
+    margin-bottom: 10px;
+}
+
+input::placeholder {
+    color: #888888; /* Slightly lighter text for placeholders */
+}
+
+input:focus {
+    border-color: #00bcd4; /* Highlight input with cool cyan on focus */
+    outline: none;
+    box-shadow: 0 0 10px #00bcd4;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.2rem;
+    background-color: #00bcd4; /* Cool cyan background */
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0097a7; /* Slightly darker cyan on hover */
+}
+
+.error {
+    color: #FF5252; /* Bright red for errors */
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.token-display {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #1E1E1E;
+    border-radius: 10px;
+    color: #00bcd4;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+}
+
+.token-display p {
+    word-break: break-all; /* Ensure token doesn't overflow */
+    background-color: #333333;
+    padding: 10px;
+    border-radius: 5px;
+    color: #E0E0E0;
+}

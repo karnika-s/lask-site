@@ -12,9 +12,9 @@ const FuturisticTheme = () => {
                 <div className="feature-list">
                     <div className="feature-item">
                         <div className="feature-description">
-                            <h3>Code Completion</h3>
+                            <h3>Code Generation</h3>
                             <p>
-                                LASK.AI provides real-time, context-aware code completions, ensuring faster development and fewer errors.
+                                LASK.AI provides real-time, context-aware code generation, ensuring faster development and fewer errors.
                             </p>
                         </div>
                         <video autoPlay loop muted className="feature-video">
@@ -28,9 +28,9 @@ const FuturisticTheme = () => {
                             Your browser does not support the video tag.
                         </video>
                         <div className="feature-description">
-                            <h3>Code Suggestions & Refactoring</h3>
+                            <h3>Context based coding</h3>
                             <p>
-                                Boost your code quality with intelligent suggestions, syntax fixes, and performance-optimizing refactoring.
+                                Just put the repository link and get personalized context based accessibility of LASK.
                             </p>
                         </div>
                     </div>
@@ -38,7 +38,7 @@ const FuturisticTheme = () => {
                         <div className="feature-description">
                             <h3>Error Detection & Fixes</h3>
                             <p>
-                                Detect potential bugs and security vulnerabilities instantly, with guided fixes for optimized code.
+                                LASK detects and fixes the syntactical errors that occur while writing the code, thus saving time to make corrections. 
                             </p>
                         </div>
                         <video autoPlay loop muted className="feature-video">
@@ -52,9 +52,9 @@ const FuturisticTheme = () => {
                             Your browser does not support the video tag.
                         </video>
                         <div className="feature-description">
-                            <h3>Automated Comments & Documentation</h3>
+                            <h3>Easy Commenting</h3>
                             <p>
-                                Automatically generate comments and documentation, simplifying code readability and project handoffs.
+                                Comment or Ucomment code automatically, which makes it more hands-on and readable, and makes it easier to maintain.
                             </p>
                         </div>
                     </div>

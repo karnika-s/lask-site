@@ -1,0 +1,24 @@
+/* TokenSent.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    align-items: center;
+}
+
+.success-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    width: 50vw;
+    color: #ffffff;
+    background: brown;
+    text-align: center;
+    margin:auto;
+}
+
+.message {
+    font-size: 1.5rem; /* Adjust the font size as needed */
+    padding: 20px;
+}

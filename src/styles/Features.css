@@ -79,7 +79,8 @@ h3{
     box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1); /* Subtle light shadow */
     transition: background-color 0.4s ease, transform 0.3s ease;
     margin: 80px;
-    border-left: 5px solid #00b4d8; /* Accent neon blue border */
+    border-left: 5px solid #9D72FF;
+     /* #00b4d8; Accent neon blue border */
 }
 
 .feature-description:hover {
@@ -93,7 +94,7 @@ h3{
     font-weight: 600;
     margin-bottom: 15px;
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    background: linear-gradient(90deg, #00b4d8, #ff3f3f);
+    background: linear-gradient(90deg, #00b4d8, #a855f7);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; /* Gradient text */
 }

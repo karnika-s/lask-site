@@ -7,6 +7,10 @@ import HeroVideoDialog from './magicui/Video'; // Adjust the path accordingly
 // import {AnimatedBeam} from './magicui/Tree'; // Adjust the path accordingly
 
 import Newsletter from "./Newsletter";
+import BoxReveal from "./magicui/Reveal"; // Ensure correct import path
+// import SparklesText from "./magicui/Sparkle";
+import { SparklesText } from './magicui/Sparkle';
+
 
 const Hero = () => {
   const [expanded, setExpanded] = useState(false);
@@ -19,71 +23,6 @@ const Hero = () => {
 
   return (
     <>
-      {/* Header Section */}
-      {/* <header className="hero-header">
-        <div className="container">
-          <div className="flex items-center justify-between">
-            <div className="shrink-0"> */}
-              {/* Logo or Branding if needed */}
-            {/* </div> */}
-
-            {/* Mobile Hamburger Menu */}
-            {/* <div className="flex md:hidden"> */}
-              {/* <button
-                type="button"
-                className="text-white"
-                onClick={() => setExpanded(!expanded)}
-                aria-expanded={expanded}
-                aria-label="Toggle Navigation"
-              >
-                {!expanded ? (
-                  <svg
-                    className="w-7 h-7"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="1.5"
-                      d="M4 6h16M4 12h16M4 18h16"
-                    />
-                  </svg>
-                ) : (
-                  <svg
-                    className="w-7 h-7"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M6 18L18 6M6 6l12 12"
-                    />
-                  </svg>
-                )}
-              </button>
-            </div> */}
-
-            {/* Desktop Navigation Links */}
-            {/* <nav className="hidden space-x-10 lg:ml-20 lg:space-x-12 md:flex"> */}
-              {/* Add your navigation links here */}
-            {/* </nav>
-          </div> */}
-
-          {/* Mobile Navigation Links */}
-          {/* {expanded && ( */}
-            {/* <nav className="flex flex-col pt-8 pb-4 space-y-6 md:hidden"> */}
-              {/* Add your mobile navigation links here */}
-            {/* </nav> */}
-          {/* )}
-        </div>
-      </header> */}
 
       {/* Hero Section */}
       <section className="hero-section">
@@ -93,9 +32,23 @@ const Hero = () => {
               Transform Your Development Workflow with
             </h3>
 
-            <h3 className="main-heading typewriter">
+            {/* <h3 className="main-heading typewriter">
               LASK.AI
+            </h3> */}
+
+          
+            {/* Apply BoxReveal effect to the heading "LASK AI" */}
+            {/* <BoxReveal boxColor={"#5046e6"} duration={0.5}> */}
+              {/* <h3 className="main-heading typewriter">
+                LASK.AI
+              </h3>
+            </BoxReveal> */}
+
+                {/* Replacing the LASK.AI heading with SparklesText */}
+                <h3 className="main-heading typewriter">
+              <SparklesText text="LASK.AI" />
             </h3>
+
 
             <p className="hero-description">
               From real-time code generation to smart debugging, LASK AI provides intelligent, context-aware suggestions that
