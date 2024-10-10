@@ -5,9 +5,15 @@ const Users = require('../models/Users');
 const router = express.Router();
 const dotenv = require('dotenv');
 const nodemailer = require('nodemailer'); // Import Nodemailer
+const { OAuth2Client } = require('google-auth-library');
+
 
 
 dotenv.config();
+
+
+// Initialize the Google OAuth2Client
+const client = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
 
 // Create transporter object for Nodemailer
 const transporter = nodemailer.createTransport({
@@ -101,5 +107,79 @@ router.post('/login', async (req, res) => {
         res.status(500).json({ message: 'Server error' });
     }
 });
+
+
+
+
+// Google OAuth Route
+router.post('/google', async (req, res) => {
+    const { token } = req.body;
+
+    try {
+        // Verify the token with Google
+        const ticket = await client.verifyIdToken({
+            idToken: token,
+            audience: process.env.GOOGLE_CLIENT_ID,
+        });
+
+        const payload = ticket.getPayload();
+        const { sub: googleId, email, name, picture } = payload;
+
+        // Check if user already exists
+        let user = await Users.findOne({ email });
+
+        if (!user) {
+            // If user doesn't exist, create a new user
+            user = new Users({
+                email,
+                googleId, // Store Google ID
+                name,
+                // Password is not required for Google users
+            });
+
+            // Generate JWT token
+            const jwtToken = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: '1h' });
+            user.token = jwtToken;
+            await user.save();
+
+            // Optionally, send a welcome email
+            const mailOptions = {
+                from: process.env.EMAIL_USER,
+                to: email,
+                subject: 'Welcome to LASK.AI',
+                text: `Hello ${name}, welcome to LASK.AI!`,
+                html: `<p>Hello <strong>${name}</strong>,</p><p>Welcome to LASK.AI!</p>`,
+            };
+
+            await transporter.sendMail(mailOptions, (err, info) => {
+                if (err) {
+                    console.error('Error sending welcome email:', err);
+                    // Not critical, so we don't fail the request
+                } else {
+                    console.log('Welcome email sent:', info.response);
+                }
+            });
+
+            res.status(201).json({ token: jwtToken });
+        } else {
+            // If user exists, update Google ID if not set
+            if (!user.googleId) {
+                user.googleId = googleId;
+                await user.save();
+            }
+
+            // Generate new JWT token
+            const jwtToken = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: '1h' });
+            user.token = jwtToken;
+            await user.save();
+
+            res.json({ token: jwtToken });
+        }
+    } catch (error) {
+        console.error('Google OAuth error:', error);
+        res.status(401).json({ message: 'Invalid Google token' });
+    }
+});
+
 
 module.exports = router;

@@ -9,12 +9,25 @@ const UserSchema = new mongoose.Schema({
     },
     password: {
         type: String,
-        required: true,
         minlength: 6, // Enforce a minimum length for passwords
+        required: function () {
+            return !this.googleId;  // Only require password if not using Google OAuth
+        },
+       
     },
     token: {  // Add token field
         type: String,
     },
+    googleId: { 
+        type: String, // Google OAuth ID
+        unique: true,
+        sparse: true, // Allow for null values in unique field
+    }, // Store Google ID
+    name: { 
+        type: String 
+    },
+
+    
     // projectToken: {
     //     type: String,
     //     required: false, // Project token for the team
@@ -28,3 +41,4 @@ const UserSchema = new mongoose.Schema({
 });
 
 module.exports = mongoose.model('Users', UserSchema);
+
