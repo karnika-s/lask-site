@@ -88,10 +88,11 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom'; // Import Link for the login link
 import '../styles/Register.css';
-import Video from "../assets/features-river-4.mp4";
+// import Video from "../assets/features-river-4.mp4";
 
 import { GoogleLogin } from '@react-oauth/google';
 import {jwtDecode} from 'jwt-decode'; // To decode Google token
+import Video from "../assets/extension.mp4";
 
 
 const Register = () => {

@@ -55,6 +55,7 @@ h3{
 
 /* Feature Video */
 .feature-video {
+  height: 80%;
     width: 40%; /* Adjusted for better focus */
     border-radius: 15px; /* Softer, more premium look */
     /* box-shadow: 0 8px 30px rgba(0, 186, 255, 0.5); Neon blue shadow */
@@ -65,7 +66,7 @@ h3{
 /* Hover Effect */
 .feature-video:hover {
     transform: scale(1.08); /* Slightly larger scale for luxurious feel */
-    box-shadow: 0 10px 40px rgba(0, 186, 255, 0.5); /* Purple glow on hover */
+    box-shadow: 0 10px 40px rgba(79, 116, 129, 0.5); /* Purple glow on hover */
 }
 
 /* Feature Description */

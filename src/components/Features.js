@@ -1,6 +1,10 @@
 import React from 'react';
 import '../styles/Features.css'; // External CSS file for styling
 import myVideo from '../assets/video.mp4'; // Adjust the path as necessary
+import comments from '../assets/add-comments.mp4';
+import gen from '../assets/code-generation.mp4';
+import fix from '../assets/fix-code.mp4';
+import gitlab from '../assets/gitlab.mp4';
 
 const FuturisticTheme = () => {
     return (
@@ -18,13 +22,13 @@ const FuturisticTheme = () => {
                             </p>
                         </div>
                         <video autoPlay loop muted className="feature-video">
-                            <source src={myVideo} type="video/mp4" />
+                            <source src={gen} type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>
                     </div>
                     <div className="feature-item reverse">
                         <video  autoPlay loop muted className="feature-video">
-                            <source src={myVideo} type="video/mp4" />
+                            <source src={gitlab} type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>
                         <div className="feature-description">
@@ -42,13 +46,13 @@ const FuturisticTheme = () => {
                             </p>
                         </div>
                         <video autoPlay loop muted className="feature-video">
-                            <source src={myVideo} type="video/mp4" />
+                            <source src={fix} type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>
                     </div>
                     <div className="feature-item reverse">
                         <video autoPlay loop muted className="feature-video">
-                            <source src={myVideo} type="video/mp4" />
+                            <source src={comments} type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>
                         <div className="feature-description">

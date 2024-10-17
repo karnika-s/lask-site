@@ -51,7 +51,7 @@ const Hero = () => {
 
 
             <p className="hero-description">
-              From real-time code generation to smart debugging, LASK AI provides intelligent, context-aware suggestions that
+              From real-time code generation to smart fixing, LASK AI provides intelligent, context-aware outputs that
               accelerate project delivery while enhancing code quality.
             </p>
 
