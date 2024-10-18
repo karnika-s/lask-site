@@ -2,6 +2,7 @@ import React from 'react';
 import Hero from './Hero';
 import  Short from './Short';   
 import Newsletter from './Newsletter';
+import Features from './Features';
 
 const App = () => {
   return (
@@ -9,7 +10,8 @@ const App = () => {
       {/* <Home /> */}
 
       <Hero/>
-      <Short/>
+      {/* <Short/> */}
+      <Features/>
       <Newsletter/>
 
     </div>

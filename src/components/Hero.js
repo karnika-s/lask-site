@@ -12,6 +12,7 @@ import BoxReveal from "./magicui/Reveal"; // Ensure correct import path
 import { SparklesText } from './magicui/Sparkle';
 
 
+
 const Hero = () => {
   const [expanded, setExpanded] = useState(false);
   const [isVideoOpen, setIsVideoOpen] = useState(false);
@@ -32,24 +33,11 @@ const Hero = () => {
               Transform Your Development Workflow with
             </h3>
 
-            {/* <h3 className="main-heading typewriter">
-              LASK.AI
-            </h3> */}
-
-          
-            {/* Apply BoxReveal effect to the heading "LASK AI" */}
-            {/* <BoxReveal boxColor={"#5046e6"} duration={0.5}> */}
-              {/* <h3 className="main-heading typewriter">
-                LASK.AI
-              </h3>
-            </BoxReveal> */}
-
                 {/* Replacing the LASK.AI heading with SparklesText */}
                 <h3 className="main-heading typewriter">
               <SparklesText text="LASK.AI" />
             </h3>
-
-
+            
             <p className="hero-description">
               From real-time code generation to smart fixing, LASK AI provides intelligent, context-aware outputs that
               accelerate project delivery while enhancing code quality.
@@ -100,11 +88,11 @@ const Hero = () => {
           {/* /> */}
 
             {/* Canvas Component */}
-            <div className="py-0 mt-0">
+            {/* <div className="py-0 mt-0">
               <div className="flex justify-start">
                 <ThreeCanvas />
               </div>
-            </div>
+            </div> */}
           </div>
         </div>     
       </section>

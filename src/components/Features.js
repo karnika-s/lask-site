@@ -1,18 +1,18 @@
 import React from 'react';
 import '../styles/Features.css'; // External CSS file for styling
 import myVideo from '../assets/video.mp4'; // Adjust the path as necessary
-import comments from '../assets/add-comments.mp4';
-import gen from '../assets/code-generation.mp4';
-import fix from '../assets/fix-code.mp4';
-import gitlab from '../assets/gitlab.mp4';
+import comments from '../assets/comment.mp4';
+import gen from '../assets/gen.mp4';
+import fix from '../assets/fix.mp4';
+import gitlab from '../assets/git.mp4';
 
 const FuturisticTheme = () => {
     return (
         <div className="lask-container">
             {/* Features Section */}
             <section className="lask-features">
-                <h2>Because even code needs a superhero!</h2>
-                <h3>Unlock new features with Lask AI</h3>
+                <h2>Unlock new features with Lask AI</h2>
+                <h3>Because even code needs a superhero!</h3>
                 <div className="feature-list">
                     <div className="feature-item">
                         <div className="feature-description">
@@ -26,17 +26,18 @@ const FuturisticTheme = () => {
                             Your browser does not support the video tag.
                         </video>
                     </div>
-                    <div className="feature-item reverse">
-                        <video  autoPlay loop muted className="feature-video">
-                            <source src={gitlab} type="video/mp4" />
-                            Your browser does not support the video tag.
-                        </video>
-                        <div className="feature-description">
+                    <div className="feature-item">
+                    <div className="feature-description">
                             <h3>Context based coding</h3>
                             <p>
                                 Just put the repository link and get personalized context based accessibility of LASK.
                             </p>
                         </div>
+                        <video  autoPlay loop muted className="feature-video">
+                            <source src={gitlab} type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
+
                     </div>
                     <div className="feature-item">
                         <div className="feature-description">
@@ -50,17 +51,18 @@ const FuturisticTheme = () => {
                             Your browser does not support the video tag.
                         </video>
                     </div>
-                    <div className="feature-item reverse">
-                        <video autoPlay loop muted className="feature-video">
-                            <source src={comments} type="video/mp4" />
-                            Your browser does not support the video tag.
-                        </video>
-                        <div className="feature-description">
+                    <div className="feature-item">
+                    <div className="feature-description">
                             <h3>Easy Commenting</h3>
                             <p>
                                 Comment or Ucomment code automatically, which makes it more hands-on and readable, and makes it easier to maintain.
                             </p>
                         </div>
+                        <video autoPlay loop muted className="feature-video">
+                            <source src={comments} type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
+ 
                     </div>
                 </div>
 
